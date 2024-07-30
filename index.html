@@ -8,39 +8,42 @@
   <script src="script.js"></script>
 </head>
 <body>
-  <header>
-    <form>
-      <input type="search" placeholder="Enter a city..." required/>
-      <input type="submit" value="search"/>
-    </form>
+  <div class="weatherBox">
+    <header>
+      <form>
+        <input type="search" id="search-input" placeholder="Enter a city..." required/>
+        <input type="submit" id="search-button" value="search"/>
+      </form>
 
-  </header>
-  <main>
-    <div>
-    <h1>
-    San Francisco
-    </h1>
-    <p>
-      Tuesday 11:06 PM, scattered clouds
-      <br />
-      Humidity: 66%, wind: 3.13 mph
-      <br />
-    </p>
-    </div>
+    </header>
+    <main>
+      <div>
+      <h1>
+      San Francisco
+      </h1>
+      <p>
+        Tuesday 11:06 PM, scattered clouds
+        <br />
+        Humidity: <span class="unit">66%,</span> 
+        wind: <span class="unit">3.13 mph</span>
+        <br />
+      </p>
+      </div>
 
-    <div>
-      12°F
-    </div>
+      <div class="tempNow">
+        <span class="tempValue">12</span>
+        <span class="degreeF">°F</span>
+      </div>
 
-  </main>
-  <footer>This project was coded by 
-    <a href="https://github.com/cechinaka" target="_blank">Christie Chinaka</a>
-    and is on
-    <a href="https://github.com/cechinaka/SheCodesPlus.Weather-app" target="_blank">
-      GitHub</a> 
-      and hosted on 
-      <a href="https://sweet-stroopwafel-7cdee4.netlify.app/" target="_blank">Netlify</a>
-    </footer>
-  
+    </main>
+    <footer>This project was coded by 
+      <a href="https://github.com/cechinaka" target="_blank">Christie Chinaka</a>
+      and is on
+      <a href="https://github.com/cechinaka/SheCodesPlus.Weather-app" target="_blank">
+        GitHub</a> 
+        and hosted on 
+        <a href="https://sweet-stroopwafel-7cdee4.netlify.app/" target="_blank">Netlify.</a>
+      </footer>
+  </div>
 </body>
 </html>
