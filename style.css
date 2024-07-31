@@ -3,6 +3,14 @@ body {
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+a {
+  color: #45a590d8;
+}
+header {
+  border-bottom: 1px solid #f9f7fe;
+  padding: 10px 0 10px 0;
+}
+
 .weatherBox {
   background: #ffffff;
   border-radius: 10px;
@@ -50,6 +58,12 @@ p {
   
 }
 
+.icon {
+  text-align: right;
+  position: relative;
+  top: -10px;
+  font-size: 50px;
+}
 .unit {
   color: #56c4acd8;
   font-weight: bold;
@@ -78,4 +92,6 @@ footer {
   font-size: 16px;
   text-align: center;
   color: #696f70;
+  border-top: 1px solid #f9f7fe;
+  padding: 20px 0 30px 0;
 }
