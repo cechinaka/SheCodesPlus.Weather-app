@@ -5,24 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Weather App</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js"></script>
 </head>
 <body>
   <div class="weatherBox">
     <header>
-      <form>
-        <input type="search" id="search-input" placeholder="Enter a city..." required/>
-        <input type="submit" id="search-button" value="search"/>
+      <form id="search-form">
+        <input 
+          type="search" 
+          id="search-input" 
+          placeholder="Enter a city..." 
+          required/>
+        <input 
+        type="submit" 
+        id="search-button" 
+        value="search"/>
       </form>
 
     </header>
     <main>
       <div>
-      <h1>
+      <h1 id="cityNow">
       San Francisco
       </h1>
       <p>
-        Tuesday 11:06 PM, scattered clouds
+        <span id="current-date">Tuesday 11:06</span>, scattered clouds
         <br />
         Humidity: <span class="unit">66%,</span> 
         wind: <span class="unit">3.13 mph</span>
@@ -30,9 +36,9 @@
       </p>
       </div>
 
-      <div class="tempNow">
+      <div class="tempCurrent">
         <span class="icon">⛅</span>
-        <span class="tempValue">12</span>
+        <span id="tempNow" class="tempValue">12</span>
         <span class="degreeF">°F</span>
       </div>
 
@@ -46,5 +52,6 @@
         <a href="https://sweet-stroopwafel-7cdee4.netlify.app/" target="_blank">Netlify.</a>
       </footer>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
