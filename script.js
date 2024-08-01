@@ -18,6 +18,14 @@ function displayNew(response) {
   let cityElement = document.querySelector("#cityNow");
   let citySearch = response.data.city;
   cityElement.innerHTML = citySearch;
+
+  let humidityElement = document.querySelector("#humidityNow")
+  let humidity = Math.round(response.data.temperature.humidity);
+  humidityElement.innerHTML = humidity;
+
+  let windSpeedElement = document.querySelector("#windNow");
+  let windSpeed = response.data.wind.speed;
+  windSpeedElement.innerHTML = windSpeed;
 }
 
 function formatDate(date) {
