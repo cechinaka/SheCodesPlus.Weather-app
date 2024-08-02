@@ -52,7 +52,7 @@ h1 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 25px;
   color: #4c4e4ec9;
   
@@ -60,9 +60,8 @@ p {
 
 .icon {
   text-align: right;
-  position: relative;
-  top: -10px;
-  font-size: 50px;
+  width: 88px;
+  height: 88px;
 }
 .unit {
   color: #56c4acd8;
@@ -88,6 +87,7 @@ p {
   position: relative;
   top: -35px;
 }
+
 footer {
   font-size: 16px;
   text-align: center;

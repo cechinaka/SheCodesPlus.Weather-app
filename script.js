@@ -19,6 +19,14 @@ function displayNew(response) {
   let citySearch = response.data.city;
   cityElement.innerHTML = citySearch;
 
+  let weatherConditions = document.querySelector("#conditionsDescription");
+  let conditions = response.data.condition.description;
+  weatherConditions.innerHTML = conditions;
+
+  let weatherIcon = document.querySelector("#icon");
+  let currentIcon = response.data.condition.icon_url;
+  weatherIcon.innerHTML = currentIcon;
+
   let humidityElement = document.querySelector("#humidityNow")
   let humidity = Math.round(response.data.temperature.humidity);
   humidityElement.innerHTML = humidity;
@@ -26,6 +34,9 @@ function displayNew(response) {
   let windSpeedElement = document.querySelector("#windNow");
   let windSpeed = response.data.wind.speed;
   windSpeedElement.innerHTML = windSpeed;
+
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-icon" />`;
 }
 
 function formatDate(date) {
@@ -63,3 +74,9 @@ let dateNow = new Date();
 
 currentDateElement.innerHTML = formatDate(dateNow);
 
+function startingCity(city) {
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Honolulu&key=b8bt1eedc53a49e91cf7bb6aob435022&units=imperial`;
+  axios.get(apiUrl).then(displayNew);
+}
+
+startingCity("Honolulu");
